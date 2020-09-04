@@ -1,5 +1,4 @@
 dist
-jsdoc
 node_modules
 .yalc
 *.orig.js
