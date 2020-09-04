@@ -1,0 +1,40 @@
+{
+  "name": "@fantaptik/core",
+  "version": "0.1.0",
+  "description": "Core functions to @fantaptik",
+  "main": "dist/index.js",
+  "files": [
+    "dist/index.js"
+  ],
+  "scripts": {
+    "jsdoc": "jsdoc -c jsdoc.config.js -u tutorials",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nofeaturesonlybugs/fantaptik-core.git"
+  },
+  "keywords": [
+    "fantaptik",
+    "@fantaptik",
+    "react",
+    "reactjs",
+    "materialize"
+  ],
+  "author": "Nofeatures Onlybugs",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.11.5",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/preset-env": "^7.11.5",
+    "@fantaptik/webpack-config": "^0.1.0",
+    "babel-loader": "^8.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "docdash": "^1.2.0",
+    "jsdoc": "^3.6.5",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "yalc": "^1.0.0-pre.42"
+  },
+  "dependencies": {}
+}
