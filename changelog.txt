@@ -1,5 +1,7 @@
 /develop
 
-+ Add destroy()
-+ Add class Events.
-+ Add class LocalStorage.
+0.1.0
+
+    + Add destroy()
+    + Add class Events.
+    + Add class LocalStorage.
