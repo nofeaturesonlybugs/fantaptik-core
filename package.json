@@ -7,7 +7,7 @@
     "dist/index.js"
   ],
   "scripts": {
-    "jsdoc": "jsdoc -c jsdoc.config.js -u tutorials",
+    "jsdoc": "jsdoc -c jsdoc.config.js -u jsdoc-tutorials",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
