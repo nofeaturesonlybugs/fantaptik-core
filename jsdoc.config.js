@@ -14,7 +14,7 @@ module.exports = {
     ],
 
     opts : {
-        destination : path.join( __dirname, "jsdoc" ),
+        destination : path.join( __dirname, "docs" ),
         recurse : true,
         template : path.join( __dirname, "node_modules/docdash" ),
     },
