@@ -1,6 +1,6 @@
 {
   "name": "@fantaptik/core",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Core functions to @fantaptik",
   "main": "dist/index.js",
   "files": [
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "/mnt/c/w/gits.node/@fantaptik/core.git"
+    "url": "https://github.com/nofeaturesonlybugs/fantaptik-core.git"
   },
   "keywords": [
     "fantaptik",
@@ -21,7 +21,7 @@
     "reactjs",
     "materialize"
   ],
-  "author": "",
+  "author": "Nofeatures Onlybugs",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.11.5",
