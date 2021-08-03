@@ -1,7 +1,15 @@
 /develop
 
-0.1.0
+0.2.0
+    + Add namespace check.
+        + gte to check value is gte another value.
+        + lte to check value is lte another value.
+    
+    + Add namespace promise.
+        + reject to create a Promise that rejects after a timeout with specific result.
+        + resolve to create a Promise that resolves after a timeout with specific result.
 
+0.1.0
     + Add destroy()
     + Add class Events.
     + Add class LocalStorage.
