@@ -4,7 +4,12 @@ import { MODULE_NAME } from './consts';
  * `destroy` acts as a destructor for `obj`.  All top-level methods of `obj` are replaced by methods that issue a
  * console warning.
  * 
+ * @example
+ * destroy( instance, "myThingerPackage", "Thinger" );
+ * 
  * @param {Object} obj The object to destroy.
+ * @param {string} module The package or library name.
+ * @param {string} label An identifying label for the entity being destroyed.
  */
 const destroy = ( obj, module, label ) => {
     const type = typeof obj;
