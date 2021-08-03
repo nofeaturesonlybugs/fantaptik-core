@@ -1,12 +1,14 @@
 {
   "name": "@fantaptik/core",
-  "version": "0.1.0+docs",
+  "version": "0.2.1",
   "description": "Core functions to @fantaptik",
   "main": "dist/index.js",
   "files": [
     "dist/index.js"
   ],
   "scripts": {
+    "build-dev": "npx webpack --mode development",
+    "build": "npx webpack --mode production",
     "jsdoc": "jsdoc -c jsdoc.config.js -R README.md -u jsdoc-tutorials",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
