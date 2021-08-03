@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>Events.js - Documentation</title>
+    <title>promise.js - Documentation</title>
     
     
     <script src="scripts/prettify/prettify.js"></script>
@@ -32,7 +32,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">Events.js</h1>
+    <h1 class="page-title">promise.js</h1>
     
 
     
@@ -42,74 +42,54 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>import { MODULE_NAME } from './consts';
-import destroy from './destroy';
-
-/**
- * `EventHandler` defines the event handler signature expected by `Events`.
+            <pre class="prettyprint source linenums"><code>/**
+ * @namespace promise
+ * @example
+ * import promise from '@fantaptik/core';
  * 
- * @see {Events}
- * @callback EventHandler
- * @param {Object} eventData The event data associated with the event.
+ * promise.reject( 1000, "error" ).catch( e => console.log( e ) ); // "error" after 1s
+ * promise.resolve( 500, ["a", "b"] ).then( data => console.log( data ) ); // ["a", "b"] after .5s
  */
 
 /**
- * `Events` provides unified event handling for event registering, unregistering, and notifying of
- * registered handlers.
+ * `reject` returns a promise that will reject after the specified `timeout` with `result`.
  * 
- * @class
- * @see {EventHandler}
- * @interface
+ * @name promise.reject
+ * @static 
+ * @function
+ * 
+ * @param {number} timeout Timeout in ms.
+ * @param {*} result The result to reject.
+ * @returns {Promise}
  */
-class Events {
-    constructor() {
-        this.props = {
-            listeners : [],
-        };
-    }
-
-    /**
-     * `destroy` unregisters all handlers and frees internal members.
-     * 
-     * @method
-     */
-    destroy = () => {
-        delete this.props;
-        //
-        destroy( this, MODULE_NAME, "Events" );
-    }
-
-    /**
-     * `register` registers an event handler that will fire only for events matching `name`.
-     * 
-     * @method
-     * @param {string} name The event `name` to register the handler to.
-     * @param {EventHandler} handler The handler function.
-     * @returns {func} A function that can be called to unregister the handler.
-     */
-    register = ( name, handler ) => {
-        const meta = { name, handler };
-        this.props.listeners.push( meta );
-        return () => {
-            if( this.props &amp;&amp; this.props.listeners ) {
-                this.props.listeners = this.props.listeners.filter( existing => existing !== meta );
-            }
-        }
-    }
-
-    /**
-     * `trigger` fires all of the appropriate handlers matching `name` with `data` as the event data.
-     * 
-     * @method
-     * @param {string} name
-     * @param {Object} data
-     */
-    trigger = ( name, data ) => {
-        this.props.listeners.map( meta => name === meta.name ? meta.handler( data ) : null );
-    }
+const reject = (timeout, result) => {
+    return new Promise( (resolve, reject ) => {
+        setTimeout( () => {
+            reject( result )
+        }, timeout );
+    } );
 }
 
-export default Events;</code></pre>
+/**
+ * `resolve` returns a promise that will resolve after the specified `timeout` with `result`.
+ * 
+ * @name promise.reject
+ * @static 
+ * @function
+ * 
+ * @param {number} timeout Timeout in ms.
+ * @param {*} result The result to resolve.
+ * @returns {Promise}
+ */
+const resolve = (timeout, result) => {
+    return new Promise( (resolve, reject ) => {
+        setTimeout( () => {
+            resolve( result )
+        }, timeout );
+    } );
+}
+
+export default { reject, resolve };</code></pre>
         </article>
     </section>
 
